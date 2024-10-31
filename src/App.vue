@@ -16,8 +16,8 @@ const FunctionalComponent = () => h(Comp, {
 <template>
 
   <!-- BUG 2 -->
-   
-  <Comp/> <!-- this errors as expected -->
-  <Comp :whatever="''" /> <!-- but somehow passing *any* prop makes the model value not required? -->
+
+  <Comp/> <!-- this errors as expected, cause modelValue prop is not provided -->
+  <Comp :whatever="''" /> <!-- this does not error, somehow passing *any* prop makes the model value not required? -->
   
 </template>
